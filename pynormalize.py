@@ -17,10 +17,10 @@ def valid_files(arg):
         if arg.endswith('.mp3') or arg.endswith('.flac'):
             return arg
         else:
-            msg = f'File type is not supported : {arg}'
+            msg = 'File type is not supported : {}'.format(arg)
             raise argparse.ArgumentTypeError(msg)
     else:
-        msg = f'File cannot be found : {arg}'
+        msg = 'File cannot be found : {}'.format(arg)
         raise argparse.ArgumentTypeError(msg)
 
 
