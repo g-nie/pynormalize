@@ -11,7 +11,7 @@ TARGET_DBFS = -13.5  # dBs for the new files
 DIRECTORY = '_NORMALIZED'  # Directory for the edited files
 
 
-# Check if given files exist in the system
+# Check if given files exist in the system and are supported
 def valid_files(arg):
     if os.path.isfile(arg):
         if arg.endswith('.mp3') or arg.endswith('.flac'):
