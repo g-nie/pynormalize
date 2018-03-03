@@ -11,6 +11,7 @@ TARGET_DBFS = -13.5  # dBs for the new files
 DIRECTORY = '_NORMALIZED'  # Directory for the edited files
 
 
+# Check if given files exist in the system
 def valid_files(arg):
     if os.path.isfile(arg):
         return arg
@@ -30,7 +31,7 @@ group.add_argument('-f', '--files', help='Audio files to normalize.', type=valid
 group.add_argument('-a', '--all', help='Process all the audio files in current directory.', action='store_true')
 args = parser.parse_args()
 
-if args.all:
+if args.all:  # User selected --all
     Audio = []
     for f in os.listdir():
         if f.endswith('.mp3') or f.endswith('.flac'):
@@ -38,7 +39,7 @@ if args.all:
     if not Audio:
         print('Current directory has no audio files.')
         sys.exit(1)
-else:
+else:  # User selected --files
     Audio = args.files
 
 for file in Audio:
