@@ -14,7 +14,11 @@ DIRECTORY = '_NORMALIZED'  # Directory for the edited files
 # Check if given files exist in the system
 def valid_files(arg):
     if os.path.isfile(arg):
-        return arg
+        if arg.endswith('.mp3') or arg.endswith('.flac'):
+            return arg
+        else:
+            msg = f'File type is not supported : {arg}'
+            raise argparse.ArgumentTypeError(msg)
     else:
         msg = f'File cannot be found : {arg}'
         raise argparse.ArgumentTypeError(msg)
@@ -49,8 +53,6 @@ for file in Audio:
     else:
         filename = file
     extension = file[file.rfind('.') + 1:]
-    if extension != 'mp3' and extension != 'flac':
-        continue
     # Extract metadata information
     if extension == 'mp3':
         form = 'mp3'
