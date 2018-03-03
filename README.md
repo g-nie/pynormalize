@@ -1,5 +1,6 @@
 # Pynormalize
-* Command line utility for audio normalization. It supports .mp3 and .flac files.
+* Command line utility for audio normalization. It saves the metadata of the original files.
+MP3 and FLAC files are currently supported.
 
 # How to use it
 Either select multiple files to download : `pynormalize.py -f audio1.mp3 /dir/audio2.flac`
