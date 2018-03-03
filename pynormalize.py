@@ -25,6 +25,7 @@ start = datetime.now()
 if not os.path.exists(DIRECTORY):  # Create the directory if it doesn't exist
     os.mkdir(DIRECTORY)
 
+# Accept only one of the arguments : either --files or --all
 parser = argparse.ArgumentParser(description='Normalize audio files to a specified level of dBs (supports .mp3 and .flac)')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-f', '--files', help='Audio files to normalize.', type=valid_files, nargs='+')
