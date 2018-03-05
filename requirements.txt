@@ -1,2 +1,8 @@
+# =============================================
+#
+# This file is meant to be consumed by pip
+#
+#     pip install -r requirements.txt
+
 pydub==0.21.0
 mutagen==1.40.0
