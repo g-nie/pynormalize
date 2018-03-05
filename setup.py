@@ -23,6 +23,9 @@ setup(
     packages=find_packages(exclude=("tests", "tests.*")),
     install_requires=requires,
     license='MIT',
+    entry_points={
+        'console_scripts':['pynormalize = pynormalize.pynormalize:run']
+    },
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
