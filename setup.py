@@ -15,7 +15,7 @@ with io.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='pynormalize',
-    version='0.1.0',
+    version='0.1.1',
     description='Audio normalization for Python',
     long_description=long_description,
     author='Giannis Terzopoulos',
