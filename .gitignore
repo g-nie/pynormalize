@@ -1,4 +1,5 @@
 test*
 *.mp3
 *.flac
+*.wav
 _NORMALIZED/
