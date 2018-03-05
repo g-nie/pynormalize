@@ -8,6 +8,7 @@ from mutagen.flac import FLAC
 
 
 # TODO : add TARGET_DBFS to argparse
+# TODO : handle .wav and other formats
 
 TARGET_DBFS = -13.5  # dBs for the new files
 DIRECTORY = '_NORMALIZED'  # Directory for the edited files
