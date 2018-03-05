@@ -5,8 +5,8 @@ MP3 and FLAC files are currently supported.
 
 How to use it
 -------------
-Either select multiple files to normalize : ``pynormalize.py -f audio1.mp3 /dir/audio2.flac``
-or edit all the audio files in current directory : ``pynormalize.py -a``
+- Either select multiple files to normalize : ``pynormalize.py -f audio1.mp3 /dir/audio2.flac``
+- or edit all the audio files in current directory : ``pynormalize.py -a``
 
 Requirements
 ------------
