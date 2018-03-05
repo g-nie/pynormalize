@@ -3,8 +3,9 @@ Pynormalize
 Command line utility for audio normalization. It saves the metadata of the original files.
 MP3 and FLAC files are currently supported.
 
-Installation::
-
+Installation
+------------
+::
    >> git clone https://github.com/giannisterzopoulos/pynormalize.git
    >> cd pynormalize
    >> pip install .
