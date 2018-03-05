@@ -2,9 +2,8 @@ import argparse
 import os
 import sys
 from datetime import datetime
-# Ignore RuntimeWarning about absence of ffmpeg
 import warnings
-with warnings.catch_warnings():
+with warnings.catch_warnings():  # Ignore RuntimeWarning about absence of ffmpeg
     warnings.simplefilter("ignore")
     from pydub import AudioSegment
 from mutagen.mp3 import MP3
