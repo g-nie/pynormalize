@@ -7,10 +7,9 @@ from mutagen.mp3 import MP3
 from mutagen.flac import FLAC
 
 
-# TODO : add TARGET_DBFS to argparse
+# TODO : handle RuntimeWarning
 # TODO : handle .wav and other formats
 
-TARGET_DBFS = -13.5  # dBs for the new files
 DIRECTORY = '_NORMALIZED'  # Directory for the edited files
 
 
@@ -34,11 +33,13 @@ if not os.path.exists(DIRECTORY):  # Create the directory if it doesn't exist
 
 # Accept only one of the arguments : either --files or --all
 parser = argparse.ArgumentParser(description='Normalize audio files to a specified level of dBs (supports .mp3 and .flac)')
+parser.add_argument('-d', '--decibels', help='Decibels to use in normalization', type=float, default='-13.5')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-f', '--files', help='Audio files to normalize.', type=valid_files, nargs='+')
 group.add_argument('-a', '--all', help='Process all the audio files in current directory.', action='store_true')
 args = parser.parse_args()
 
+target_dbfs = args.decibels
 if args.all:  # User selected --all
     Audio = []
     for f in os.listdir():
@@ -71,7 +72,7 @@ for file in Audio:
         tracknumber = FLAC(file).get('tracknumber')[0] if FLAC(file).get('tracknumber') else ''
     # Export the edited file
     song = AudioSegment.from_file(file, format=form)
-    change_in_dBFS = TARGET_DBFS - song.dBFS
+    change_in_dBFS = target_dbfs - song.dBFS
     dest_file = os.path.join(DIRECTORY, filename)
     normalized_sound = song.apply_gain(change_in_dBFS)
     normalized_sound.export(dest_file, format=form)
