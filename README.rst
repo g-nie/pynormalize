@@ -7,7 +7,6 @@ Installation
 ------------
 
 Clone it::
-
    >> git clone https://github.com/giannisterzopoulos/pynormalize.git
    >> cd pynormalize
    >> pip install .
