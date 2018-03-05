@@ -20,11 +20,12 @@ setup(
     long_description=long_description,
     author='Giannis Terzopoulos',
     author_email='terzo.giannis@gmail.com',
+    home_page='https://github.com/giannisterzopoulos/pynormalize',
     packages=find_packages(exclude=("tests", "tests.*")),
     install_requires=requires,
     license='MIT',
     entry_points={
-        'console_scripts':['pynormalize = pynormalize.pynormalize:run']
+        'console_scripts': ['pynormalize = pynormalize.pynormalize:run']
     },
     classifiers=[
         # Trove classifiers
