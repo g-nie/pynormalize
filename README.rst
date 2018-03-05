@@ -4,13 +4,13 @@ Command line utility for audio normalization. It saves the metadata of the origi
 MP3 and FLAC files are currently supported.
 
 Installation
-----------::
-
+------------
+Clone it
    >> git clone https://github.com/giannisterzopoulos/pynormalize.git
    >> cd pynormalize
    >> pip install .
 
-or via PyPI : ``pip install pynormalize``
+or install via PyPI : ``pip install pynormalize``
 
 How to use it
 -------------
