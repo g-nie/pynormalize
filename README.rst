@@ -12,7 +12,7 @@ Clone it::
    >> cd pynormalize
    >> pip install .
 
-or install via PyPI : ``pip install pynormalize``
+or install it via PyPI : ``pip install pynormalize``
 
 How to use it
 -------------
