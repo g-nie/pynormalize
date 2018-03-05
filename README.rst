@@ -6,7 +6,7 @@ MP3 and FLAC files are currently supported.
 Installation
 ------------
 
-Clone it :::
+Clone it ::
 
    >> git clone https://github.com/giannisterzopoulos/pynormalize.git
    >> cd pynormalize
