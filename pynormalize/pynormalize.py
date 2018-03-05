@@ -2,15 +2,18 @@ import argparse
 import os
 import sys
 from datetime import datetime
-from pydub import AudioSegment
+# Ignore RuntimeWarning about absence of ffmpeg
+import warnings
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    from pydub import AudioSegment
 from mutagen.mp3 import MP3
 from mutagen.flac import FLAC
 
 
-# TODO : handle RuntimeWarning
 # TODO : handle .wav and other formats
 
-DIRECTORY = '_NORMALIZED'  # Directory for the edited files
+DIRECTORY = '_NORMALIZED'  # Directory to store edited files
 
 
 # Check if given files exist in the system and are supported
@@ -31,9 +34,9 @@ start = datetime.now()
 if not os.path.exists(DIRECTORY):  # Create the directory if it doesn't exist
     os.mkdir(DIRECTORY)
 
-# Accept only one of the arguments : either --files or --all
 parser = argparse.ArgumentParser(description='Normalize audio files to a specified level of dBs (supports .mp3 and .flac)')
 parser.add_argument('-d', '--decibels', help='Decibels to use in normalization', type=float, default='-13.5')
+# Accept only one of these arguments : either --files or --all
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument('-f', '--files', help='Audio files to normalize.', type=valid_files, nargs='+')
 group.add_argument('-a', '--all', help='Process all the audio files in current directory.', action='store_true')
