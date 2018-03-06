@@ -1,13 +1,14 @@
 import argparse
 import os
 import sys
-from datetime import datetime
 import warnings
-with warnings.catch_warnings():  # Ignore RuntimeWarning about absence of ffmpeg
-    warnings.simplefilter("ignore")
-    from pydub import AudioSegment
+from datetime import datetime
 from mutagen.mp3 import MP3
 from mutagen.flac import FLAC
+with warnings.catch_warnings():
+    # Ignore RuntimeWarning about absence of ffmpeg
+    warnings.simplefilter("ignore")
+    from pydub import AudioSegment
 
 
 # TODO : handle .wav and other formats
