@@ -1,11 +1,11 @@
-_NORMALIZED/
+NORMALIZED/
 ffmpeg.exe
 test*
 *.wav
 *.flac
 *.mp3
 *.ogg
-*.webm*
+*.webm
 *.mp4
 *.wma
 *.m4a
