@@ -55,9 +55,10 @@ else:  # User selected --files
     Audio = args.files
 
 show_message = True
-for file in Audio:
+for c, file in enumerate(Audio):
     (dirname, filename) = os.path.split(file)
     (shortname, extension) = os.path.splitext(filename)
+    print('Processing file : "{}" ({} of {})'.format(filename, c + 1, len(Audio)))
 
     # Extract metadata information
     tags = mutagen.File(file, easy=True)
