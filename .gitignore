@@ -1,5 +1,13 @@
 _NORMALIZED/
+ffmpeg.exe
 test*
-*.mp3
-*.flac
 *.wav
+*.flac
+*.mp3
+*.ogg
+*.webm*
+*.mp4
+*.wma
+*.m4a
+*.ape
+*.aac
