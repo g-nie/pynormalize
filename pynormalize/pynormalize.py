@@ -11,6 +11,7 @@ with warnings.catch_warnings():
 
 
 # TODO : CHECK WHAT HAPPENS WHEN FFMPEG NOT PRESENT
+# TODO : USE DIRECTORY AS ARGUMENT
 
 DIRECTORY = '_NORMALIZED'  # Directory to store edited files
 

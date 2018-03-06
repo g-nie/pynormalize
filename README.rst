@@ -1,7 +1,7 @@
 Pynormalize
 ===========
 Command line utility for audio normalization. It saves the metadata of the original files.
-MP3 and FLAC files are currently supported.
+|Currently supported formats : WAV, FLAC, MP3, OGG, WEBM and MP4.
 
 Installation
 ------------
