@@ -1,6 +1,8 @@
 NORMALIZED/
 ffmpeg.exe
 test*
+.pytest*
+*.pyc
 *.wav
 *.flac
 *.mp3

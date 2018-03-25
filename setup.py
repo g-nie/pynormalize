@@ -1,40 +1,44 @@
-import io
-import os
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# pylint: disable=E0602,W0122
+
 from setuptools import find_packages, setup
 
 
-requires = [
+with open('README.rst', encoding='utf-8') as readme_file:
+    long_description = '\n' + readme_file.read()
+
+requirements = [
     'pydub>=0.21.0',
     'mutagen>=1.40.0'
 ]
 
-here = os.path.abspath(os.path.dirname(__file__))
-with io.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
-    long_description = '\n' + f.read()
-
+# Get the data from scribd_dl/version.py without importing the package
+exec(compile(open('scribd_dl/version.py').read(), 'version.py', 'exec'))
 
 setup(
     name='pynormalize',
-    version='0.1.3',
+    version=VERSION,
     description='Audio normalization for Python',
     long_description=long_description,
-    author='Giannis Terzopoulos',
-    author_email='terzo.giannis@gmail.com',
+    author=AUTHOR,
+    author_email=EMAIL,
     url='https://github.com/giannisterzopoulos/pynormalize',
     packages=find_packages(exclude=("tests", "tests.*")),
-    install_requires=requires,
+    install_requires=requirements,
     license='MIT',
     entry_points={
         'console_scripts': ['pynormalize = pynormalize.pynormalize:run']
     },
     classifiers=[
-        # Trove classifiers
-        # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+        STATUS,
+        'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python',
+        'Natural Language :: English',
+        'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: Implementation :: CPython',
     ]
 )

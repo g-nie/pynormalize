@@ -21,9 +21,7 @@ How to use it
 
 Requirements
 ------------
-- Python 3.4+
-- pydub 0.21.0+
-- mutagen 1.40.0+
-- FFmpeg 3.4+ is also required for opening and saving non-wav files. Get it from `here`_
+FFmpeg is required for opening and saving non-wav files. Get it from `here`_.
+Pynormalize supports **Python 3.4-3.6**
 
 .. _`here`: https://www.ffmpeg.org/
