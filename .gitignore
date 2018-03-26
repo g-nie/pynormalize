@@ -1,4 +1,5 @@
 NORMALIZED/
+audio_files/
 ffmpeg.exe
 test.py
 test_flactomp3.py
