@@ -1,6 +1,13 @@
 NORMALIZED/
+audio_files/
 ffmpeg.exe
-test*
+test.py
+test_flactomp3.py
+
+*.coverage
+*.egg-info
+.pytest*
+*.pyc
 *.wav
 *.flac
 *.mp3

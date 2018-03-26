@@ -1,7 +1,44 @@
 Pynormalize
 ===========
+
+.. image:: https://img.shields.io/pypi/pyversions/scribd-dl.svg
+        :target: https://pypi.python.org/pypi/scribd-dl/
+        :alt: Python versions
+
+
+.. image:: https://travis-ci.org/giannisterzopoulos/scribd-dl.svg?branch=master
+        :target: https://travis-ci.org/giannisterzopoulos/scribd-dl
+        :alt: Build Status
+
+
+.. image:: https://badge.fury.io/py/scribd-dl.svg
+        :target: https://pypi.python.org/pypi/scribd-dl/
+        :alt: PyPI Version
+
+
 | Command line utility for audio normalization. It saves the metadata of the original files.
 | Currently supported formats : WAV, FLAC, MP3, OGG, WEBM and MP4.
+
+
+Usage
+-----
+- Either select multiple files to normalize : ``pynormalize -f audio1.mp3 /dir/audio2.flac``
+- or edit all the audio files in current directory : ``pynormalize -a``
+
+you can also import pynormalize:
+
+.. code-block:: python
+
+    import pynormalize
+
+    Files = ['audio.wav']
+    target_dbfs = -13.5
+
+    pynormalize.process_files(
+        Audio=Files,
+        target_dbfs=target_dbfs,
+    )
+
 
 Installation
 ------------
@@ -12,18 +49,14 @@ Clone it ::
    >> cd pynormalize
    >> pip install .
 
-or use pip : ``pip install pynormalize``
+or install from PyPI : ``pip install pynormalize``
 
-How to use it
--------------
-- Either select multiple files to normalize : ``pynormalize -f audio1.mp3 /dir/audio2.flac``
-- or edit all the audio files in current directory : ``pynormalize -a``
 
 Requirements
 ------------
-- Python 3.4+
-- pydub 0.21.0+
-- mutagen 1.40.0+
-- FFmpeg 3.4+ is also required for opening and saving non-wav files. Get it from `here`_
+FFmpeg is required for opening and saving non-wav files. Get it from `here`_
+and put it in the pynormalize directory (where pynormalize.py is stored) or
+in your system PATH variable.
+Pynormalize supports **Python 3.4-3.6**
 
 .. _`here`: https://www.ffmpeg.org/
