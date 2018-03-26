@@ -14,8 +14,8 @@ requirements = [
     'mutagen>=1.40.0'
 ]
 
-# Get the data from scribd_dl/version.py without importing the package
-exec(compile(open('scribd_dl/version.py').read(), 'version.py', 'exec'))
+# Get the data from pynormalize/version.py without importing the package
+exec(compile(open('pynormalize/version.py').read(), 'version.py', 'exec'))
 
 setup(
     name='pynormalize',
@@ -29,7 +29,7 @@ setup(
     install_requires=requirements,
     license='MIT',
     entry_points={
-        'console_scripts': ['pynormalize = pynormalize.pynormalize:run']
+        'console_scripts': ['pynormalize = pynormalize.pynormalize:main']
     },
     classifiers=[
         STATUS,

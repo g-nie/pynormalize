@@ -1,6 +1,9 @@
 NORMALIZED/
 ffmpeg.exe
-test*
+test.py
+test_flactomp3.py
+
+*.egg-info
 .pytest*
 *.pyc
 *.wav
