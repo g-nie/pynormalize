@@ -16,10 +16,10 @@ Pynormalize
         :alt: PyPI Version
 
 
-
-| Command line utility for audio normalization. It saves the metadata of the original files.
-| Currently supported formats : WAV, FLAC, MP3, OGG, WEBM and MP4.
-
+|
+| **Command line utility for audio normalization**
+|
+| It saves the metadata of the original files. Currently supported formats : WAV, FLAC, MP3, OGG, WEBM and MP4.
 
 Usage
 -----
