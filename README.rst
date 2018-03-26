@@ -19,8 +19,8 @@ Pynormalize
 
 Usage
 -----
-- Either select multiple files to normalize : ``pynormalize -f audio1.mp3 /dir/audio2.flac``
-- or edit all the audio files in current directory : ``pynormalize -a``
+- Either select multiple files to normalize : ``pynormalize --files audio1.mp3 /dir/audio2.flac``
+- or edit all the audio files in current directory : ``pynormalize --all``
 
 you can also import pynormalize:
 
