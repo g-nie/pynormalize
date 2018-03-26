@@ -46,7 +46,7 @@ Clone it ::
    >> cd pynormalize
    >> pip install .
 
-or install from PyPI : ``pip install pynormalize``
+or install via PyPI : ``pip install pynormalize``
 
 
 Requirements
