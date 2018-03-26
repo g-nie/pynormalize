@@ -79,8 +79,6 @@ def process_files(Files, target_dbfs, directory='NORMALIZED'):
     Normalize the audio files, given their paths and the decibels
     relative to full scale (dbfs). Default argument 'directory' can be overwritten.
     """
-
-    print(os.listdir())
     Files = [os.path.abspath(f) for f in Files]
     if not os.path.exists(directory):  # Create the directory if it doesn't exist
         os.mkdir(directory)
@@ -103,8 +101,6 @@ def process_files(Files, target_dbfs, directory='NORMALIZED'):
         except Exception as e:
             logger.error('%s , Skipping...', str(e))
             continue
-
-        print(os.listdir())
 
         # Export the edited file
         try:

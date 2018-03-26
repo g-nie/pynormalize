@@ -1,5 +1,21 @@
 Pynormalize
 ===========
+
+.. image:: https://img.shields.io/pypi/pyversions/scribd-dl.svg
+        :target: https://pypi.python.org/pypi/scribd-dl/
+        :alt: Python versions
+
+
+.. image:: https://travis-ci.org/giannisterzopoulos/scribd-dl.svg?branch=master
+        :target: https://travis-ci.org/giannisterzopoulos/scribd-dl
+        :alt: Build Status
+
+
+.. image:: https://badge.fury.io/py/scribd-dl.svg
+        :target: https://pypi.python.org/pypi/scribd-dl/
+        :alt: PyPI Version
+
+
 | Command line utility for audio normalization. It saves the metadata of the original files.
 | Currently supported formats : WAV, FLAC, MP3, OGG, WEBM and MP4.
 

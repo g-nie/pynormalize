@@ -4,6 +4,7 @@ ffmpeg.exe
 test.py
 test_flactomp3.py
 
+*.coverage
 *.egg-info
 .pytest*
 *.pyc

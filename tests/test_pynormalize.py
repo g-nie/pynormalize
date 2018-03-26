@@ -26,10 +26,15 @@ def get_modified_time_diff(f):
 
 
 def cleanup_on_finish(Files, folder):
+    delete_dir = True
     for f in Files:
         os.remove(f)
-        os.remove(os.path.join(folder, f))
-    os.removedirs(folder)
+        try:
+            os.remove(os.path.join(folder, f))
+        except FileNotFoundError:
+            delete_dir = False
+    if delete_dir:
+        os.removedirs(folder)
 
 
 def test_process_files():
@@ -61,3 +66,16 @@ def test_process_files_different_directory():
     else:
         assert False
     cleanup_on_finish(Files, EDITED_STORE)
+
+
+def test_invalid_files():
+    Nonexist = ['temp.wav', 'temp.mp3']
+    target_dbfs = -13.5
+    process_files(Nonexist, target_dbfs)
+
+    Unsupported = ['audio1.ape', 'audio2.aac']
+    for u in Unsupported:
+        with open(u, 'w'):
+            pass
+    process_files(Unsupported, target_dbfs)
+    cleanup_on_finish(Unsupported, '/')
