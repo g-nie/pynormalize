@@ -1,10 +1,6 @@
 Pynormalize
 ===========
 
-.. image:: https://img.shields.io/pypi/pyversions/pynormalize.svg
-        :target: https://pypi.python.org/pypi/pynormalize/
-        :alt: Python versions
-
 
 .. image:: https://travis-ci.org/giannisterzopoulos/pynormalize.svg?branch=master
         :target: https://travis-ci.org/giannisterzopoulos/pynormalize
