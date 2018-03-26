@@ -13,7 +13,7 @@ install:
 
 script:
   - flake8 pynormalize --ignore=E402,E501,E731,E741
-  - coverage run --source=pynormalize --omit=pynormalize/version.py -m pytest tests/ -s
+  - coverage run --source=pynormalize --omit=pynormalize/version.py -m pytest -s tests/
 
 after_success:
   - coverage report -m
